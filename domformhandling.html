@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="d1">Welocome to edupoly</h1>
+    <button onclick="abc()" >Click me..</button>
+    <input type="text" id="d2" onkeyup="abc()">
+    <script>
+        
+        
+         
+          let y = document.getElementById("d1")
+          var msg = y.innerHTML
+          function abc(){
+            let x = document.getElementById('d2')
+          y.innerHTML= "hii"+x.value+ ","+msg
+
+        }
+    </script>
+</body>
+</html>
