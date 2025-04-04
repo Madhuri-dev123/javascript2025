@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1"></div>
+    <script type="text/babel" >
+        let todos = ["buy a car","buy a bus","buy a buycicle"]
+             function addTodo(){
+                let newTodo = document.getElementById("nt").value;
+                todos.push(newTodo)
+                document.getElementById("nt").value=""
+        abc()
+             }
+             function abc(){
+      let todolist =
+              
+                    
+    <>
+         <input type="text" id="nt"/>
+         <button onClick={()=>{addTodo()}}>Click</button>
+        <ul>
+ {
+         todos.map((todo)=>{
+                    return <li>{todo}</li>
+                })
+                  }
+            </ul>
+            </>
+        ReactDOM.render(todolist,document.getElementById("d1"))
+             }
+             abc()
+    </script>
+       
+</body>
+</html>

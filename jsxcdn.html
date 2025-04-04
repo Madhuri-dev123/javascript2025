@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <h1>hello</h1>
+    <div id="d1"></div>
+    <div id="d2"></div>
+   <script>
+     var x = document.createElement("h1")
+     x.innerHTML="hello Madhuri";
+     var y = document.getElementById("d1")
+     y.appendChild(x)
+
+     let a = React.createElement("h2","null","this is react element")
+     
+
+     ReactDom.render(a,document.getElementById("d2"))
+
+
+     
+   </script>
+</body>
+</html>

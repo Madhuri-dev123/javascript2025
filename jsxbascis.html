@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1"></div>
+     <script type="text/babel">
+          let a = 10;
+          let b = 20;
+          let str = "Rani"
+          let arr = [12,1,4,6,7,9,10]
+          let arr1 = ["madhu","hari","giri"]
+         let jsxele = <h1>this is jsx Element{a+b} {"madhuri"+"gunnapaneni"}{(a<b)||(a<b)}{Math.sqrt(14)}
+             {parseInt(134.42)} {"madhuri".toUpperCase()} {"madhuri".length} {"madhuri".split("").reverse().join("")}
+             {a>b?a:b}
+            
+              {
+                arr1.map((a)=>{
+                    return <li>{a}</li>
+                })
+              }
+            </h1>
+         ReactDOM.render(jsxele,document.getElementById("d1"))
+  
+     </script>
+</body>
+</html>

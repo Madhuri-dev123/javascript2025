@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <h1 style="color:navy;"flex="display",font-family="Arial" font-size="100px" padding="2px " >This is Html Element</h1>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <script type="text/babel">
+        let htmltext = document.createElement("h1")
+        htmltext.style.color="red"
+        
+          htmltext.innerHTML="this is dom Element";
+        document.getElementById("d1").appendChild(htmltext)
+
+        let reactext = React.createElement("h1",{style:{color:"blue" }},"this is reactjs text")
+        ReactDOM.render(reactext,document.getElementById("d2"))
+         let a = 10;
+         let b = 20;
+         let arr = ["madhuri","gpwri","bindhu"]
+        let jsxtext = <h1>This is Jsx Element{a+b}
+                         {
+                         arr.map((a)=>{
+                            return <li style={ a.length%2===0?{color:"yellow"}:{color:"pink"}}>{a}</li>
+                         })
+                         }
+            
+            </h1>
+
+          
+        ReactDOM.render(jsxtext,document.getElementById("d3"))
+
+    </script>
+</body>
+</html>
