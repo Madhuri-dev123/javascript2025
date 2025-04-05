@@ -12,10 +12,14 @@
     <div id="d1"></div>
       <script type="text/babel">
 
-        let courses = ["Reactjs","Angular","Javascript","Nodejs"]
-          function Y() {
+        
+          function Y(props) {
+            console.log(props)
+               let courses = props.courses;
+               let title = props.title
             return (
                 <div>
+                  <h1>{title}</h1>
                     <ul>
                            {
                             courses.map((course)=>{
@@ -29,11 +33,10 @@
 
           let x = 
                      <div>
-                        <h1>Welcome to Software Industry</h1>
-                        <Y></Y>
-                        <Y></Y>
-                        <Y></Y>
-                        <Y></Y>
+                        
+                        <Y title="Fullstack" courses="{['Reac't,'angular']}"></Y>
+                        <Y title="devops" courses={["aws","cloud"]}></Y>
+                        
                         </div>
           ReactDOM.render(x,document.getElementById("d1"))
       </script>
